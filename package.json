@@ -1,0 +1,16 @@
+{
+  "name": "subgraph-devkit",
+  "description": "Happines kit for subgraph developers",
+  "version": "1.0.0",
+  "main": "assembly/index.ts",
+  "license": "MIT",
+  "author": "Luis Lopez",
+  "devDependencies": {
+    "assemblyscript": "^0.25.2",
+    "typescript": "^4.9.4"
+  },
+  "type": "module",
+  "dependencies": {
+    "@graphprotocol/graph-ts": "^0.29.1"
+  }
+}
