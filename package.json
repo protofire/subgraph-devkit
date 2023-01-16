@@ -1,7 +1,7 @@
 {
   "name": "subgraph-devkit",
   "description": "Happiness kit for subgraph developers",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "assembly/index.ts",
   "license": "MIT",
   "author": "Luis Lopez",
