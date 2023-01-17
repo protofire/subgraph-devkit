@@ -1,4 +1,4 @@
-![example workflow](https://github.com/github/docs/actions/workflows/push.yaml/badge.svg)
+![ci](https://github.com/protofire/subgraph-devkit/actions/workflows/push.yaml/badge.svg)
 
 # Subgraph Devkit
 
