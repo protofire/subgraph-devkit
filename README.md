@@ -1,3 +1,5 @@
+![ci](https://github.com/protofire/subgraph-devkit/actions/workflows/push.yaml/badge.svg)
+
 # Subgraph Devkit
 
 Happiness kit for subgraph developers
