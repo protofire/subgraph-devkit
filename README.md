@@ -1,3 +1,5 @@
+![example workflow](https://github.com/github/docs/actions/workflows/push.yaml/badge.svg)
+
 # Subgraph Devkit
 
 Happiness kit for subgraph developers
