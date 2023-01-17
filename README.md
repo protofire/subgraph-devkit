@@ -11,10 +11,10 @@ Happiness kit for subgraph developers
 ### Installation:
 
 ```shell
-yarn add https://github.com/protofire/subgraph-devkit
+yarn add subgraph-devkit
 ```
 
-### Use:
+### Usage:
 
 ```typescript
 import { decimals } from "protofire/subgraph-devkit";
