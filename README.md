@@ -11,7 +11,7 @@ Happiness kit for subgraph developers
 ### Installation:
 
 ```shell
-yarn add subgraph-devkit
+yarn add @protofire/subgraph-devkit
 ```
 
 ### Usage:
