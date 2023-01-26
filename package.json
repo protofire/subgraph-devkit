@@ -22,7 +22,7 @@
     "test": "cd ./tests/dummy && yarn test"
   },
   "engines": {
-    "node": ">=16 <19",
+    "node": ">=16 <20",
     "yarn": "^1.22.19"
   }
 }
