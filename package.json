@@ -5,6 +5,10 @@
   "main": "assembly/index.ts",
   "license": "MIT",
   "author": "Luis Lopez",
+  "repository": {
+    "url": "https://github.com/protofire/subgraph-devkit",
+    "type": "git"
+  },
   "devDependencies": {
     "assemblyscript": "^0.25.2",
     "typescript": "^4.9.4"
@@ -16,5 +20,9 @@
   },
   "scripts": {
     "test": "cd ./tests/dummy && yarn test"
+  },
+  "engines": {
+    "node": ">=16 <20",
+    "yarn": "^1.22.19"
   }
 }
