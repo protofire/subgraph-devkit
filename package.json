@@ -1,5 +1,5 @@
 {
-  "name": "subgraph-devkit",
+  "name": "@protofire/subgraph-devkit",
   "description": "Happiness kit for subgraph developers",
   "version": "1.1.0",
   "main": "assembly/index.ts",
