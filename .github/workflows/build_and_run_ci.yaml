@@ -1,13 +1,10 @@
-name: Node.js CI
+name: Build & Run CI
 
 on:
-  push:
-    branches: [main, dev]
-  pull_request:
-    branches: [main, dev]
+  workflow_call:
 
 jobs:
-  build:
+  build_and_run_ci:
     runs-on: ubuntu-latest
 
     strategy:
