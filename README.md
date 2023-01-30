@@ -1,4 +1,4 @@
-![ci](https://github.com/protofire/subgraph-devkit/actions/workflows/push.yaml/badge.svg)
+![ci](https://github.com/protofire/subgraph-devkit/actions/workflows/ci.yaml/badge.svg)
 
 # Subgraph Devkit
 
@@ -17,7 +17,7 @@ yarn add @protofire/subgraph-devkit
 ### Usage:
 
 ```typescript
-import { decimals } from "protofire/subgraph-devkit";
+import { decimals } from "@protofire/subgraph-devkit";
 ```
 
 ### Contributing:
