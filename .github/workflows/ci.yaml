@@ -1,0 +1,11 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  call_build_and_run_ci_workflow:
+    uses: ./.github/workflows/build_and_run_ci.yaml

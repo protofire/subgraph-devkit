@@ -1,0 +1,24 @@
+name: YARN Publish
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  call_build_and_run_ci_workflow:
+    uses: ./.github/workflows/build_and_run_ci.yaml
+
+  publish-npm:
+    needs: call_build_and_run_ci_workflow
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+          scope: "@protofire"
+      - run: yarn --frozen-lockfile
+      - run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
