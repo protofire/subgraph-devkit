@@ -17,7 +17,7 @@ yarn add @protofire/subgraph-devkit
 ### Usage:
 
 ```typescript
-import { decimals } from "protofire/subgraph-devkit";
+import { decimals } from "@protofire/subgraph-devkit";
 ```
 
 ### Contributing:
