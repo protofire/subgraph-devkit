@@ -4,6 +4,21 @@
 
 Happiness kit for subgraph developers
 
+### Features:
+
+- Oracles
+
+  - Token Price Fetching
+
+- Numbers
+
+  - Factories
+  - Conversion
+
+- Testing
+  - Mocking
+  - Assertions
+
 ### Tech Stack:
 
 - AssemblyScript
