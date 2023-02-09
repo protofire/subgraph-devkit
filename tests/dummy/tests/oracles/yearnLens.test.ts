@@ -1,9 +1,9 @@
 import { Address, BigInt } from "@graphprotocol/graph-ts";
 import { describe, test } from "matchstick-as";
 import { decimals, tests } from "../../../../assembly";
-import { chainlink } from "../../../../assembly/oracles";
+import { yearnLens } from "../../../../assembly/oracles";
 
-describe("ChainLink", () => {
+describe("YearnLens", () => {
   describe("fetchPrice", () => {
     test("returns token price in BigDecimal", () => {
       const token = Address.fromString(
@@ -12,10 +12,10 @@ describe("ChainLink", () => {
 
       const price = BigInt.fromI32(1500000);
 
-      tests.mocks.mockChainLink(token, chainlink.USD_ADDRESS, price, 6);
+      tests.mocks.mockYearnLens(token, price);
 
       const expectedResult = decimals.fromBigInt(price, 6);
-      const result = chainlink.fetchPrice(token, chainlink.USD_ADDRESS);
+      const result = yearnLens.fetchPrice(token);
 
       tests.asserts.decimalEquals(result, expectedResult);
     });
