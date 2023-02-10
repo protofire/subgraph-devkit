@@ -29,21 +29,15 @@ Happiness kit for subgraph developers
 yarn add @protofire/subgraph-devkit
 ```
 
-### Running Tests
-
-In order to be able to take advantage of matchstick testing library, we have added a dummy subgraph inside tests folder.
-Tests will live inside that dummy subgraph and you can run them as follows:
-
-```shell
-yarn test
-```
-
 ### Documentation
 
 #### Oracles
 
 ```typescript
+import { Address } from "@graphprotocol/graph-ts";
 import { oracles } from "@protofire/subgraph-devkit";
+
+const tokenAddress = Address.fromString("0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984")
 
 // get token price in usd from ChainLink oracle
 oracles.chainlink.fetchPrice(tokenAddress)
@@ -112,3 +106,12 @@ describe("decimalEquals", () => {
 - **Commit** changes to your own branch
 - **Push** your work back up to your fork
 - Submit a **Pull request** so that we can review your changes
+
+### Running Tests
+
+In order to be able to take advantage of matchstick testing library, we have added a dummy subgraph inside tests folder.
+Tests will live inside that dummy subgraph and you can run them as follows:
+
+```shell
+yarn test
+```
