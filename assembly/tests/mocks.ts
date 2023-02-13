@@ -1,6 +1,6 @@
 import { Address, BigInt, ethereum } from "@graphprotocol/graph-ts";
 import { createMockedFunction } from "matchstick-as";
-import { chainlink, yearnLens } from "../oracles";
+import { chainlink, yearnLens, uniswap } from "../oracles";
 
 export function mockChainLink(
   baseAddress: Address,
@@ -45,4 +45,27 @@ export function mockYearnLens(quoteAddress: Address, value: BigInt): void {
   )
     .withArgs([ethereum.Value.fromAddress(quoteAddress)])
     .returns([ethereum.Value.fromUnsignedBigInt(value)]);
+}
+
+export function mock_Uniswap_getAmountsOut(
+  amountIn: BigInt,
+  path: Address[],
+  amountOut: BigInt
+): void {
+  createMockedFunction(
+    uniswap.UNISWAP_ROUTER_CONTRACT_ADDRESS,
+    "getAmountsOut",
+    "getAmountsOut(uint256,address[]):(uint256[])"
+  )
+    .withArgs([
+      ethereum.Value.fromUnsignedBigInt(amountIn),
+      ethereum.Value.fromAddressArray(path),
+    ])
+    .returns([ethereum.Value.fromUnsignedBigIntArray([amountIn, amountOut])]);
+}
+
+export function mock_ERC20_decimals(address: Address, decimals: u8): void {
+  createMockedFunction(address, "decimals", "decimals():(uint8)").returns([
+    ethereum.Value.fromI32(decimals),
+  ]);
 }
