@@ -1,9 +1,10 @@
 import { Address, BigInt } from "@graphprotocol/graph-ts";
 import { describe, test } from "matchstick-as";
-import { decimals, tests, oracles, constants } from "../../../../assembly";
+import { decimals, tests, constants } from "../../../../assembly";
+import { uniswap } from "../../../../assembly/oracles";
 
 describe("Uniswap", () => {
-  describe("fetchPrice", () => {
+  describe("fetchPriceUSD", () => {
     test("returns token price in BigDecimal", () => {
       const token = Address.fromString(
         "0x0000000000000000000000000000000000000001"
@@ -21,7 +22,7 @@ describe("Uniswap", () => {
       );
 
       const expectedResult = decimals.fromBigInt(price, 6);
-      const result = oracles.uniswap.fetchPrice(token);
+      const result = uniswap.fetchPriceUSD(token);
 
       tests.asserts.decimalEquals(result, expectedResult);
     });

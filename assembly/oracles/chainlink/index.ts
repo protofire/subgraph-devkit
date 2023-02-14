@@ -6,12 +6,12 @@ export const USD_ADDRESS = Address.fromString(
   "0x0000000000000000000000000000000000000348"
 );
 
-export function fetchPrice(token: Address, unit: Address): BigDecimal {
+export function fetchPrice(token: Address, unitAddress: Address): BigDecimal {
   const contract = Contract.bind(constants.addresses.CHAINLINK_FEED_REGISTRY);
 
-  const latestRoundDataCall = contract.try_latestRoundData(token, unit);
+  const latestRoundDataCall = contract.try_latestRoundData(token, unitAddress);
 
-  const pairDecimalsCall = contract.try_decimals(token, unit);
+  const pairDecimalsCall = contract.try_decimals(token, unitAddress);
 
   const price = latestRoundDataCall.value.value1;
   const pairDecimals = pairDecimalsCall.value;
