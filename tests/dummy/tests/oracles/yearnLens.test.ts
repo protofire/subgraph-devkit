@@ -4,7 +4,7 @@ import { decimals, tests } from "../../../../assembly";
 import { yearnLens } from "../../../../assembly/oracles";
 
 describe("YearnLens", () => {
-  describe("fetchPrice", () => {
+  describe("fetchPriceUSD", () => {
     test("returns token price in BigDecimal", () => {
       const token = Address.fromString(
         "0x0000000000000000000000000000000000000001"
@@ -15,7 +15,7 @@ describe("YearnLens", () => {
       tests.mocks.mockYearnLens(token, price);
 
       const expectedResult = decimals.fromBigInt(price, 6);
-      const result = yearnLens.fetchPrice(token);
+      const result = yearnLens.fetchPriceUSD(token);
 
       tests.asserts.decimalEquals(result, expectedResult);
     });

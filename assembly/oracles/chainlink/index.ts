@@ -1,21 +1,17 @@
 import { Address, BigDecimal } from "@graphprotocol/graph-ts";
-import { decimals } from "../..";
+import { decimals, constants } from "../..";
 import { Contract } from "./Contract";
-
-export const CONTRACT_ADDRESS = Address.fromString(
-  "0x47fb2585d2c56fe188d0e6ec628a38b74fceeedf"
-);
 
 export const USD_ADDRESS = Address.fromString(
   "0x0000000000000000000000000000000000000348"
 );
 
-export function fetchPrice(token: Address, unit: Address): BigDecimal {
-  const contract = Contract.bind(CONTRACT_ADDRESS);
+export function fetchPrice(token: Address, unitAddress: Address): BigDecimal {
+  const contract = Contract.bind(constants.addresses.CHAINLINK_FEED_REGISTRY);
 
-  const latestRoundDataCall = contract.try_latestRoundData(token, unit);
+  const latestRoundDataCall = contract.try_latestRoundData(token, unitAddress);
 
-  const pairDecimalsCall = contract.try_decimals(token, unit);
+  const pairDecimalsCall = contract.try_decimals(token, unitAddress);
 
   const price = latestRoundDataCall.value.value1;
   const pairDecimals = pairDecimalsCall.value;
