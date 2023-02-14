@@ -1,7 +1,7 @@
 import { Address, BigInt, ethereum } from "@graphprotocol/graph-ts";
 import { createMockedFunction } from "matchstick-as";
 import { constants } from "..";
-import { chainlink, yearnLens } from "../oracles";
+import { yearnLens } from "../oracles";
 
 export function mockChainLink(
   baseAddress: Address,
@@ -10,7 +10,7 @@ export function mockChainLink(
   decimals: u8
 ): void {
   createMockedFunction(
-    chainlink.CONTRACT_ADDRESS,
+    constants.addresses.CHAINLINK_FEED_REGISTRY,
     "latestRoundData",
     "latestRoundData(address,address):(uint80,int256,uint256,uint256,uint80)"
   )
@@ -27,7 +27,7 @@ export function mockChainLink(
     ]);
 
   createMockedFunction(
-    chainlink.CONTRACT_ADDRESS,
+    constants.addresses.CHAINLINK_FEED_REGISTRY,
     "decimals",
     "decimals(address,address):(uint8)"
   )

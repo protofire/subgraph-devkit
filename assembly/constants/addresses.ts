@@ -9,3 +9,6 @@ export const USDC = Address.fromString(
 export const UNISWAP_V2_ROUTER_02 = Address.fromString(
   "0x7a250d5630b4cf539739df2c5dacb4c659f2488d"
 );
+export const CHAINLINK_FEED_REGISTRY = Address.fromString(
+  "0x47fb2585d2c56fe188d0e6ec628a38b74fceeedf"
+);
