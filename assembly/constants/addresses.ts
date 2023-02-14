@@ -12,3 +12,6 @@ export const UNISWAP_V2_ROUTER_02 = Address.fromString(
 export const CHAINLINK_FEED_REGISTRY = Address.fromString(
   "0x47fb2585d2c56fe188d0e6ec628a38b74fceeedf"
 );
+export const YEARN_LENS_ORACLE = Address.fromString(
+  "0x83d95e0d5f402511db06817aff3f9ea88224b030"
+);

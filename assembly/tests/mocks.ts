@@ -1,7 +1,6 @@
 import { Address, BigInt, ethereum } from "@graphprotocol/graph-ts";
 import { createMockedFunction } from "matchstick-as";
 import { constants } from "..";
-import { yearnLens } from "../oracles";
 
 export function mockChainLink(
   baseAddress: Address,
@@ -40,7 +39,7 @@ export function mockChainLink(
 
 export function mockYearnLens(quoteAddress: Address, value: BigInt): void {
   createMockedFunction(
-    yearnLens.CONTRACT_ADDRESS,
+    constants.addresses.YEARN_LENS_ORACLE,
     "getPriceUsdcRecommended",
     "getPriceUsdcRecommended(address):(uint256)"
   )
