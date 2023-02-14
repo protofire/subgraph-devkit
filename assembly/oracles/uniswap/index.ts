@@ -2,14 +2,12 @@ import { Address, BigDecimal } from "@graphprotocol/graph-ts";
 import { UniswapRouterContract } from "./UniswapRouterContract";
 import { fetchDecimals } from "../../erc20";
 import { addresses } from "../../constants";
-import { decimals, integers } from "../..";
-
-export const UNISWAP_ROUTER_CONTRACT_ADDRESS = Address.fromString(
-  "0x7a250d5630b4cf539739df2c5dacb4c659f2488d"
-);
+import { decimals, integers, constants } from "../..";
 
 export function fetchPrice(tokenAddress: Address): BigDecimal {
-  const contract = UniswapRouterContract.bind(UNISWAP_ROUTER_CONTRACT_ADDRESS);
+  const contract = UniswapRouterContract.bind(
+    constants.addresses.UNISWAP_V2_ROUTER_02
+  );
 
   let path: Address[] = [];
 

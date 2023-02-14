@@ -1,6 +1,7 @@
 import { Address, BigInt, ethereum } from "@graphprotocol/graph-ts";
 import { createMockedFunction } from "matchstick-as";
-import { chainlink, yearnLens, uniswap } from "../oracles";
+import { constants } from "..";
+import { chainlink, yearnLens } from "../oracles";
 
 export function mockChainLink(
   baseAddress: Address,
@@ -53,7 +54,7 @@ export function mock_Uniswap_getAmountsOut(
   amountOut: BigInt
 ): void {
   createMockedFunction(
-    uniswap.UNISWAP_ROUTER_CONTRACT_ADDRESS,
+    constants.addresses.UNISWAP_V2_ROUTER_02,
     "getAmountsOut",
     "getAmountsOut(uint256,address[]):(uint256[])"
   )
