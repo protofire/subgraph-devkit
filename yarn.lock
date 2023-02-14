@@ -2,17 +2,10 @@
 # yarn lockfile v1
 
 
-"@graphprotocol/graph-ts@^0.27.0":
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/@graphprotocol/graph-ts/-/graph-ts-0.27.0.tgz#948fe1716f6082964a01a63a19bcbf9ac44e06ff"
-  integrity sha512-r1SPDIZVQiGMxcY8rhFSM0y7d/xAbQf5vHMWUf59js1KgoyWpM6P3tczZqmQd7JTmeyNsDGIPzd9FeaxllsU4w==
-  dependencies:
-    assemblyscript "0.19.10"
-
-"@graphprotocol/graph-ts@^0.29.1":
-  version "0.29.1"
-  resolved "https://registry.yarnpkg.com/@graphprotocol/graph-ts/-/graph-ts-0.29.1.tgz#8f8fb6815fc4a7470bb8aff8004f032a2639300b"
-  integrity sha512-GhAP2ijk3cTM0xBjoAFxEmdZbYl1BueCYqAGw5G7UyBX3EV8FWkvD5DMam6IkLGqXasBmelCFrROK3B5t6zVdg==
+"@graphprotocol/graph-ts@^0.29.3":
+  version "0.29.3"
+  resolved "https://registry.yarnpkg.com/@graphprotocol/graph-ts/-/graph-ts-0.29.3.tgz#f0a664790e966f5fb9bce317a8861e84ec1f3394"
+  integrity sha512-FXBLGlunOSwjiUXYEz1J9J/I2D/myldyib/9v0R+gn/NJaYqUkXD39UmIuRxqj9cBzB/FYojHzoHidIG5nYZDw==
   dependencies:
     assemblyscript "0.19.10"
 
@@ -71,12 +64,11 @@ long@^5.2.0:
   resolved "https://registry.yarnpkg.com/long/-/long-5.2.1.tgz#e27595d0083d103d2fa2c20c7699f8e0c92b897f"
   integrity sha512-GKSNGeNAtw8IryjjkhZxuKB3JzlcLTwjtiQCHKvqQet81I93kXslhDQruGI/QsddO83mcDToBVy7GqGS/zYf/A==
 
-matchstick-as@^0.5.0:
+matchstick-as@llopez/matchstick-as#dev:
   version "0.5.0"
-  resolved "https://registry.yarnpkg.com/matchstick-as/-/matchstick-as-0.5.0.tgz#cdafc1ef49d670b9cbe98e933bc2a5cb7c450aeb"
-  integrity sha512-4K619YDH+so129qt4RB4JCNxaFwJJYLXPc7drpG+/mIj86Cfzg6FKs/bA91cnajmS1CLHdhHl9vt6Kd6Oqvfkg==
+  resolved "https://codeload.github.com/llopez/matchstick-as/tar.gz/69d35376ec310128a5dec10fcc52966e3933ef5e"
   dependencies:
-    "@graphprotocol/graph-ts" "^0.27.0"
+    "@graphprotocol/graph-ts" "^0.29.3"
     assemblyscript "^0.19.20"
     wabt "1.0.24"
 
