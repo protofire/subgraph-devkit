@@ -82,6 +82,13 @@ integers.ONE;
 // number 10 in BigInt
 integers.TEN;
 
+// Get min/max value
+const a = BigInt.fromI32(100);
+const b = BigInt.fromI32(101);
+
+integers.min(a, b); // => 100
+integers.max(a, b); // => 101
+
 // Create BigDecimal from BigInt
 const n = BigInt.fromI32(1000000);
 decimals.fromBigInt(n, 6); // => 1
@@ -95,6 +102,13 @@ decimals.fromInt(9223372036854775807);
 // Convert BigDecimal to BigInt
 const n = BigDecimal.fromString("1234.56");
 decimals.toBigInt(n); // => 123456
+
+// Get min/max value
+const a = BigDecimal.fromString("100.525678");
+const b = BigDecimal.fromString("100.525679");
+
+decimals.min(a, b); // => 100.525678
+decimals.max(a, b); // => 100.525679
 ```
 
 #### Bytes
