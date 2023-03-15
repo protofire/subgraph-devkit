@@ -1,4 +1,4 @@
-import { BigInt } from "@graphprotocol/graph-ts";
+import { BigInt, Bytes } from "@graphprotocol/graph-ts";
 
 export function min(a: BigInt, b: BigInt): BigInt {
   return BigInt.compare(a, b) < 1 ? a : b;
@@ -6,6 +6,11 @@ export function min(a: BigInt, b: BigInt): BigInt {
 
 export function max(a: BigInt, b: BigInt): BigInt {
   return BigInt.compare(a, b) > 1 ? a : b;
+}
+
+export function toBytes(value: BigInt, bigEndian: bool = true): Bytes {
+  const littleEndian = Bytes.fromBigInt(value);
+  return changetype<Bytes>(bigEndian ? littleEndian.reverse() : littleEndian);
 }
 
 export const TEN = BigInt.fromI32(10);

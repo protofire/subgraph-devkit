@@ -1,5 +1,5 @@
 import { assert, describe, test } from "matchstick-as/assembly/index";
-import { BigInt } from "@graphprotocol/graph-ts";
+import { BigInt, Bytes } from "@graphprotocol/graph-ts";
 import { integers } from "../../../assembly";
 
 describe("Integers", () => {
@@ -32,6 +32,22 @@ describe("Integers", () => {
       const b = BigInt.fromI32(101);
 
       assert.bigIntEquals(b, integers.max(a, b));
+    });
+  });
+  describe("toBytes", () => {
+    test("converts BigInt into Bytes bigEndian", () => {
+      const n = BigInt.fromI32(100);
+      const result = integers.toBytes(n);
+      const bigEndianBytes = Bytes.fromHexString("0x00000064");
+
+      assert.bytesEquals(bigEndianBytes, result);
+    });
+    test("converts BigInt into Bytes littleEndian", () => {
+      const n = BigInt.fromI32(100);
+      const result = integers.toBytes(n, false);
+      const littleEndianBytes = Bytes.fromHexString("0x64000000");
+
+      assert.bytesEquals(littleEndianBytes, result);
     });
   });
 });
