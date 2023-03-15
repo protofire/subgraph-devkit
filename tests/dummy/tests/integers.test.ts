@@ -18,4 +18,20 @@ describe("Integers", () => {
       assert.bigIntEquals(integers.TEN, BigInt.fromI32(10));
     });
   });
+  describe("min", () => {
+    test("returns the minimum value", () => {
+      const a = BigInt.fromI32(100);
+      const b = BigInt.fromI32(101);
+
+      assert.bigIntEquals(a, integers.min(a, b));
+    });
+  });
+  describe("max", () => {
+    test("returns the maximum value", () => {
+      const a = BigInt.fromI32(100);
+      const b = BigInt.fromI32(101);
+
+      assert.bigIntEquals(b, integers.max(a, b));
+    });
+  });
 });
