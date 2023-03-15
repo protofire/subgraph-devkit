@@ -90,6 +90,10 @@ const b = BigInt.fromI32(101);
 integers.min(a, b); // => 100
 integers.max(a, b); // => 101
 
+// Convert BigInt into Bytes
+const n = BigInt.fromI32(100);
+integers.toBytes(n);
+
 // Create BigDecimal from BigInt
 const n = BigInt.fromI32(1000000);
 decimals.fromBigInt(n, 6); // => 1
