@@ -53,4 +53,20 @@ describe("Decimals", () => {
       );
     });
   });
+  describe("min", () => {
+    test("returns the minimum value", () => {
+      const a = BigDecimal.fromString("100.525678");
+      const b = BigDecimal.fromString("100.525679");
+
+      tests.asserts.decimalEquals(a, decimals.min(a, b));
+    });
+  });
+  describe("max", () => {
+    test("returns the maximum value", () => {
+      const a = BigDecimal.fromString("100.525678");
+      const b = BigDecimal.fromString("100.525679");
+
+      tests.asserts.decimalEquals(b, decimals.max(a, b));
+    });
+  });
 });
