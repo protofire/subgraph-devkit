@@ -14,6 +14,7 @@ Happiness kit for subgraph developers
 
   - [x] Factories
   - [x] Conversion
+  - [x] Helpers
 
 - [Bytes](#bytes)
 
