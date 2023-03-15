@@ -15,6 +15,10 @@ Happiness kit for subgraph developers
   - [x] Factories
   - [x] Conversion
 
+- [Bytes](#bytes)
+
+  - [x] Conversion
+
 - [Testing](#testing)
 
   - [x] Mocking
@@ -91,6 +95,25 @@ decimals.fromInt(9223372036854775807);
 // Convert BigDecimal to BigInt
 const n = BigDecimal.fromString("1234.56");
 decimals.toBigInt(n); // => 123456
+```
+
+#### Bytes
+
+```typescript
+import { bytes } from "@protofire/subgraph-devkit";
+
+// Convert Bytes into Address
+const stringAddress = "0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984";
+const bytesAddress = Bytes.fromHexString(stringAddress);
+const address = bytes.toAddress(bytesAddress);
+
+// Convert unsigned number in Bytes into BigInt
+const bytesData = Bytes.fromHexString("0x28fc");
+bytes.toUnsignedBigInt(bytesData); // => 10492
+
+// Convert signed number in Bytes into BigInt
+const bytesData = Bytes.fromHexString("0xd704");
+bytes.toSignedBigInt(bytesData); // => -10492
 ```
 
 #### Testing
