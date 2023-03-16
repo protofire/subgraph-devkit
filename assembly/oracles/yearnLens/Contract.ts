@@ -70,7 +70,7 @@ export class Contract extends ethereum.SmartContract {
       "getNormalizedValueUsdc(address,uint256):(uint256)",
       [
         ethereum.Value.fromAddress(tokenAddress),
-        ethereum.Value.fromUnsignedBigInt(amount),
+        ethereum.Value.fromUnsignedBigInt(amount)
       ]
     );
 
@@ -86,7 +86,7 @@ export class Contract extends ethereum.SmartContract {
       "getNormalizedValueUsdc(address,uint256):(uint256)",
       [
         ethereum.Value.fromAddress(tokenAddress),
-        ethereum.Value.fromUnsignedBigInt(amount),
+        ethereum.Value.fromUnsignedBigInt(amount)
       ]
     );
     if (result.reverted) {
@@ -107,7 +107,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(tokenAddress),
         ethereum.Value.fromUnsignedBigInt(amount),
-        ethereum.Value.fromUnsignedBigInt(priceUsdc),
+        ethereum.Value.fromUnsignedBigInt(priceUsdc)
       ]
     );
 
@@ -125,7 +125,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(tokenAddress),
         ethereum.Value.fromUnsignedBigInt(amount),
-        ethereum.Value.fromUnsignedBigInt(priceUsdc),
+        ethereum.Value.fromUnsignedBigInt(priceUsdc)
       ]
     );
     if (result.reverted) {
@@ -181,7 +181,7 @@ export class Contract extends ethereum.SmartContract {
 
   tokenAliases(param0: Address): Address {
     let result = super.call("tokenAliases", "tokenAliases(address):(address)", [
-      ethereum.Value.fromAddress(param0),
+      ethereum.Value.fromAddress(param0)
     ]);
 
     return result[0].toAddress();
