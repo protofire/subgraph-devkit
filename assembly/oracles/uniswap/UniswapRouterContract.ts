@@ -3,7 +3,7 @@ import {
   TypedMap,
   Bytes,
   Address,
-  BigInt,
+  BigInt
 } from "@graphprotocol/graph-ts";
 
 export class UniswapRouterContract__addLiquidityResult {
@@ -179,7 +179,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountAMin),
         ethereum.Value.fromUnsignedBigInt(amountBMin),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
 
@@ -211,7 +211,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountAMin),
         ethereum.Value.fromUnsignedBigInt(amountBMin),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
     if (result.reverted) {
@@ -253,7 +253,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
       [
         ethereum.Value.fromUnsignedBigInt(amountOut),
         ethereum.Value.fromUnsignedBigInt(reserveIn),
-        ethereum.Value.fromUnsignedBigInt(reserveOut),
+        ethereum.Value.fromUnsignedBigInt(reserveOut)
       ]
     );
 
@@ -271,7 +271,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
       [
         ethereum.Value.fromUnsignedBigInt(amountOut),
         ethereum.Value.fromUnsignedBigInt(reserveIn),
-        ethereum.Value.fromUnsignedBigInt(reserveOut),
+        ethereum.Value.fromUnsignedBigInt(reserveOut)
       ]
     );
     if (result.reverted) {
@@ -292,7 +292,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
       [
         ethereum.Value.fromUnsignedBigInt(amountIn),
         ethereum.Value.fromUnsignedBigInt(reserveIn),
-        ethereum.Value.fromUnsignedBigInt(reserveOut),
+        ethereum.Value.fromUnsignedBigInt(reserveOut)
       ]
     );
 
@@ -310,7 +310,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
       [
         ethereum.Value.fromUnsignedBigInt(amountIn),
         ethereum.Value.fromUnsignedBigInt(reserveIn),
-        ethereum.Value.fromUnsignedBigInt(reserveOut),
+        ethereum.Value.fromUnsignedBigInt(reserveOut)
       ]
     );
     if (result.reverted) {
@@ -326,7 +326,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
       "getAmountsIn(uint256,address[]):(uint256[])",
       [
         ethereum.Value.fromUnsignedBigInt(amountOut),
-        ethereum.Value.fromAddressArray(path),
+        ethereum.Value.fromAddressArray(path)
       ]
     );
 
@@ -342,7 +342,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
       "getAmountsIn(uint256,address[]):(uint256[])",
       [
         ethereum.Value.fromUnsignedBigInt(amountOut),
-        ethereum.Value.fromAddressArray(path),
+        ethereum.Value.fromAddressArray(path)
       ]
     );
     if (result.reverted) {
@@ -358,7 +358,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
       "getAmountsOut(uint256,address[]):(uint256[])",
       [
         ethereum.Value.fromUnsignedBigInt(amountIn),
-        ethereum.Value.fromAddressArray(path),
+        ethereum.Value.fromAddressArray(path)
       ]
     );
 
@@ -374,7 +374,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
       "getAmountsOut(uint256,address[]):(uint256[])",
       [
         ethereum.Value.fromUnsignedBigInt(amountIn),
-        ethereum.Value.fromAddressArray(path),
+        ethereum.Value.fromAddressArray(path)
       ]
     );
     if (result.reverted) {
@@ -391,7 +391,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
       [
         ethereum.Value.fromUnsignedBigInt(amountA),
         ethereum.Value.fromUnsignedBigInt(reserveA),
-        ethereum.Value.fromUnsignedBigInt(reserveB),
+        ethereum.Value.fromUnsignedBigInt(reserveB)
       ]
     );
 
@@ -409,7 +409,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
       [
         ethereum.Value.fromUnsignedBigInt(amountA),
         ethereum.Value.fromUnsignedBigInt(reserveA),
-        ethereum.Value.fromUnsignedBigInt(reserveB),
+        ethereum.Value.fromUnsignedBigInt(reserveB)
       ]
     );
     if (result.reverted) {
@@ -438,7 +438,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountAMin),
         ethereum.Value.fromUnsignedBigInt(amountBMin),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
 
@@ -467,7 +467,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountAMin),
         ethereum.Value.fromUnsignedBigInt(amountBMin),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
     if (result.reverted) {
@@ -499,7 +499,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountTokenMin),
         ethereum.Value.fromUnsignedBigInt(amountETHMin),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
 
@@ -526,7 +526,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountTokenMin),
         ethereum.Value.fromUnsignedBigInt(amountETHMin),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
     if (result.reverted) {
@@ -558,7 +558,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountTokenMin),
         ethereum.Value.fromUnsignedBigInt(amountETHMin),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
 
@@ -582,7 +582,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountTokenMin),
         ethereum.Value.fromUnsignedBigInt(amountETHMin),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
     if (result.reverted) {
@@ -617,7 +617,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromBoolean(approveMax),
         ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(v)),
         ethereum.Value.fromFixedBytes(r),
-        ethereum.Value.fromFixedBytes(s),
+        ethereum.Value.fromFixedBytes(s)
       ]
     );
 
@@ -652,7 +652,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromBoolean(approveMax),
         ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(v)),
         ethereum.Value.fromFixedBytes(r),
-        ethereum.Value.fromFixedBytes(s),
+        ethereum.Value.fromFixedBytes(s)
       ]
     );
     if (result.reverted) {
@@ -692,7 +692,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromBoolean(approveMax),
         ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(v)),
         ethereum.Value.fromFixedBytes(r),
-        ethereum.Value.fromFixedBytes(s),
+        ethereum.Value.fromFixedBytes(s)
       ]
     );
 
@@ -724,7 +724,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromBoolean(approveMax),
         ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(v)),
         ethereum.Value.fromFixedBytes(r),
-        ethereum.Value.fromFixedBytes(s),
+        ethereum.Value.fromFixedBytes(s)
       ]
     );
     if (result.reverted) {
@@ -761,7 +761,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromBoolean(approveMax),
         ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(v)),
         ethereum.Value.fromFixedBytes(r),
-        ethereum.Value.fromFixedBytes(s),
+        ethereum.Value.fromFixedBytes(s)
       ]
     );
 
@@ -798,7 +798,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromBoolean(approveMax),
         ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(v)),
         ethereum.Value.fromFixedBytes(r),
-        ethereum.Value.fromFixedBytes(s),
+        ethereum.Value.fromFixedBytes(s)
       ]
     );
     if (result.reverted) {
@@ -828,7 +828,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountOutMin),
         ethereum.Value.fromAddressArray(path),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
 
@@ -850,7 +850,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountOutMin),
         ethereum.Value.fromAddressArray(path),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
     if (result.reverted) {
@@ -875,7 +875,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountOutMin),
         ethereum.Value.fromAddressArray(path),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
 
@@ -897,7 +897,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountOutMin),
         ethereum.Value.fromAddressArray(path),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
     if (result.reverted) {
@@ -922,7 +922,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountInMax),
         ethereum.Value.fromAddressArray(path),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
 
@@ -944,7 +944,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountInMax),
         ethereum.Value.fromAddressArray(path),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
     if (result.reverted) {
@@ -969,7 +969,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountInMax),
         ethereum.Value.fromAddressArray(path),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
 
@@ -991,7 +991,7 @@ export class UniswapRouterContract extends ethereum.SmartContract {
         ethereum.Value.fromUnsignedBigInt(amountInMax),
         ethereum.Value.fromAddressArray(path),
         ethereum.Value.fromAddress(to),
-        ethereum.Value.fromUnsignedBigInt(deadline),
+        ethereum.Value.fromUnsignedBigInt(deadline)
       ]
     );
     if (result.reverted) {

@@ -15,14 +15,14 @@ export function mockChainLink(
   )
     .withArgs([
       ethereum.Value.fromAddress(baseAddress),
-      ethereum.Value.fromAddress(quoteAddress),
+      ethereum.Value.fromAddress(quoteAddress)
     ])
     .returns([
       ethereum.Value.fromI32(0),
       ethereum.Value.fromUnsignedBigInt(value),
       ethereum.Value.fromI32(0),
       ethereum.Value.fromI32(0),
-      ethereum.Value.fromI32(0),
+      ethereum.Value.fromI32(0)
     ]);
 
   createMockedFunction(
@@ -32,7 +32,7 @@ export function mockChainLink(
   )
     .withArgs([
       ethereum.Value.fromAddress(baseAddress),
-      ethereum.Value.fromAddress(quoteAddress),
+      ethereum.Value.fromAddress(quoteAddress)
     ])
     .returns([ethereum.Value.fromI32(decimals)]);
 }
@@ -59,13 +59,13 @@ export function mock_Uniswap_getAmountsOut(
   )
     .withArgs([
       ethereum.Value.fromUnsignedBigInt(amountIn),
-      ethereum.Value.fromAddressArray(path),
+      ethereum.Value.fromAddressArray(path)
     ])
     .returns([ethereum.Value.fromUnsignedBigIntArray([amountIn, amountOut])]);
 }
 
 export function mock_ERC20_decimals(address: Address, decimals: u8): void {
   createMockedFunction(address, "decimals", "decimals():(uint8)").returns([
-    ethereum.Value.fromI32(decimals),
+    ethereum.Value.fromI32(decimals)
   ]);
 }

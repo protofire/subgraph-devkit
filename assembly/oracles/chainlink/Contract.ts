@@ -393,7 +393,7 @@ export class Contract extends ethereum.SmartContract {
   decimals(base: Address, quote: Address): i32 {
     let result = super.call("decimals", "decimals(address,address):(uint8)", [
       ethereum.Value.fromAddress(base),
-      ethereum.Value.fromAddress(quote),
+      ethereum.Value.fromAddress(quote)
     ]);
 
     return result[0].toI32();
@@ -465,7 +465,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
 
@@ -483,7 +483,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
     if (result.reverted) {
@@ -522,7 +522,7 @@ export class Contract extends ethereum.SmartContract {
   getFeed(base: Address, quote: Address): Address {
     let result = super.call("getFeed", "getFeed(address,address):(address)", [
       ethereum.Value.fromAddress(base),
-      ethereum.Value.fromAddress(quote),
+      ethereum.Value.fromAddress(quote)
     ]);
 
     return result[0].toAddress();
@@ -548,7 +548,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
 
@@ -566,7 +566,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
     if (result.reverted) {
@@ -587,7 +587,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId)),
+        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId))
       ]
     );
 
@@ -605,7 +605,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId)),
+        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId))
       ]
     );
     if (result.reverted) {
@@ -624,7 +624,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId)),
+        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId))
       ]
     );
 
@@ -642,7 +642,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId)),
+        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId))
       ]
     );
     if (result.reverted) {
@@ -663,7 +663,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId)),
+        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId))
       ]
     );
 
@@ -684,7 +684,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId)),
+        ethereum.Value.fromUnsignedBigInt(BigInt.fromI32(phaseId))
       ]
     );
     if (result.reverted) {
@@ -706,7 +706,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
 
@@ -724,7 +724,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
     if (result.reverted) {
@@ -771,7 +771,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(_roundId),
+        ethereum.Value.fromUnsignedBigInt(_roundId)
       ]
     );
 
@@ -795,7 +795,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(_roundId),
+        ethereum.Value.fromUnsignedBigInt(_roundId)
       ]
     );
     if (result.reverted) {
@@ -820,7 +820,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
 
@@ -838,7 +838,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
     if (result.reverted) {
@@ -855,7 +855,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
 
@@ -873,7 +873,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
     if (result.reverted) {
@@ -885,7 +885,7 @@ export class Contract extends ethereum.SmartContract {
 
   isFeedEnabled(aggregator: Address): boolean {
     let result = super.call("isFeedEnabled", "isFeedEnabled(address):(bool)", [
-      ethereum.Value.fromAddress(aggregator),
+      ethereum.Value.fromAddress(aggregator)
     ]);
 
     return result[0].toBoolean();
@@ -1045,7 +1045,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
 
@@ -1069,7 +1069,7 @@ export class Contract extends ethereum.SmartContract {
       [
         ethereum.Value.fromAddress(base),
         ethereum.Value.fromAddress(quote),
-        ethereum.Value.fromUnsignedBigInt(roundId),
+        ethereum.Value.fromUnsignedBigInt(roundId)
       ]
     );
     if (result.reverted) {
@@ -1152,7 +1152,7 @@ export class Contract extends ethereum.SmartContract {
   version(base: Address, quote: Address): BigInt {
     let result = super.call("version", "version(address,address):(uint256)", [
       ethereum.Value.fromAddress(base),
-      ethereum.Value.fromAddress(quote),
+      ethereum.Value.fromAddress(quote)
     ]);
 
     return result[0].toBigInt();
