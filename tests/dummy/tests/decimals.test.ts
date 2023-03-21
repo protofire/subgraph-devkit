@@ -101,4 +101,34 @@ describe("Decimals", () => {
       );
     });
   });
+  describe("toRad", () => {
+    test("returns RAD from BigDecimal", () => {
+      const value = BigDecimal.fromString("12.5");
+
+      assert.bigIntEquals(
+        BigInt.fromString("12500000000000000000000000000000000000000000000"),
+        decimals.toRad(value)
+      );
+    });
+  });
+  describe("toRay", () => {
+    test("returns RAY from BigDecimal", () => {
+      const value = BigDecimal.fromString("12.5");
+
+      assert.bigIntEquals(
+        BigInt.fromString("12500000000000000000000000000"),
+        decimals.toRay(value)
+      );
+    });
+  });
+  describe("toWad", () => {
+    test("returns WAD from BigDecimal", () => {
+      const value = BigDecimal.fromString("12.5");
+
+      assert.bigIntEquals(
+        BigInt.fromString("12500000000000000000"),
+        decimals.toWad(value)
+      );
+    });
+  });
 });

@@ -43,3 +43,21 @@ export function fromRay(value: BigInt): BigDecimal {
 export function fromWad(value: BigInt): BigDecimal {
   return value.divDecimal(WAD.toBigDecimal());
 }
+
+export function toRad(value: BigDecimal): BigInt {
+  const n = value.times(RAD.toBigDecimal());
+
+  return BigInt.fromString(n.toString());
+}
+
+export function toRay(value: BigDecimal): BigInt {
+  const n = value.times(RAY.toBigDecimal());
+
+  return BigInt.fromString(n.toString());
+}
+
+export function toWad(value: BigDecimal): BigInt {
+  const n = value.times(WAD.toBigDecimal());
+
+  return BigInt.fromString(n.toString());
+}
