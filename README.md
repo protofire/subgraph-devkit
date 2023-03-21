@@ -201,6 +201,17 @@ constants.addresses.YEARN_LENS_ORACLE;
 
 // USDC unit (BigInt): 1000000
 constants.units.USDC;
+
+// MakerDAO
+
+// WAD unit (BigInt): 1000000000000000000
+constants.units.WAD;
+
+// RAY unit (BigInt): 1000000000000000000000000000
+constants.units.RAY;
+
+// RAD unit (BigInt): 1000000000000000000000000000000000000000000000
+constants.units.RAD;
 ```
 
 ### Contributing:
