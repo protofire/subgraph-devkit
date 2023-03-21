@@ -69,4 +69,36 @@ describe("Decimals", () => {
       tests.asserts.decimalEquals(b, decimals.max(a, b));
     });
   });
+  describe("fromRad", () => {
+    test("returns BigDecimal from RAD", () => {
+      const rad = BigInt.fromString(
+        "12500000000000000000000000000000000000000000000"
+      );
+
+      tests.asserts.decimalEquals(
+        BigDecimal.fromString("12.5"),
+        decimals.fromRad(rad)
+      );
+    });
+  });
+  describe("fromWad", () => {
+    test("returns BigDecimal from WAD", () => {
+      const wad = BigInt.fromString("12500000000000000000");
+
+      tests.asserts.decimalEquals(
+        BigDecimal.fromString("12.5"),
+        decimals.fromWad(wad)
+      );
+    });
+  });
+  describe("fromRay", () => {
+    test("returns BigDecimal from RAY", () => {
+      const ray = BigInt.fromString("12500000000000000000000000000");
+
+      tests.asserts.decimalEquals(
+        BigDecimal.fromString("12.5"),
+        decimals.fromRay(ray)
+      );
+    });
+  });
 });
