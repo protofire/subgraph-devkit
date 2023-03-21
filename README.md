@@ -114,6 +114,33 @@ const b = BigDecimal.fromString("100.525679");
 
 decimals.min(a, b); // => 100.525678
 decimals.max(a, b); // => 100.525679
+
+// MakerDAO
+
+// Create BigDecimal from RAD BigInt
+const rad = BigInt.fromString(
+  "12500000000000000000000000000000000000000000000"
+);
+decimals.fromRad(rad); // => 12.5;
+
+// Create BigDecimal from WAD BigInt
+const wad = BigInt.fromString("12500000000000000000");
+decimals.fromWad(wad); // => 12.5
+
+// Create BigDecimal from RAY BigInt
+const ray = BigInt.fromString("12500000000000000000000000000");
+decimals.fromRay(ray); // => 12.5
+
+const value = BigDecimal.fromString("12.5");
+
+// Convert BigDecimal into RAD BigInt
+decimals.toRad(value); // => 12500000000000000000000000000000000000000000000
+
+// Convert BigDecimal into RAY BigInt
+decimals.toRay(value); // => 12500000000000000000000000000
+
+// Convert BigDecimal into WAD BigInt
+decimals.toWad(value); // => 12500000000000000000
 ```
 
 #### Bytes
