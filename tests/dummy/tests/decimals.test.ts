@@ -69,4 +69,66 @@ describe("Decimals", () => {
       tests.asserts.decimalEquals(b, decimals.max(a, b));
     });
   });
+  describe("fromRad", () => {
+    test("returns BigDecimal from RAD", () => {
+      const rad = BigInt.fromString(
+        "12500000000000000000000000000000000000000000000"
+      );
+
+      tests.asserts.decimalEquals(
+        BigDecimal.fromString("12.5"),
+        decimals.fromRad(rad)
+      );
+    });
+  });
+  describe("fromWad", () => {
+    test("returns BigDecimal from WAD", () => {
+      const wad = BigInt.fromString("12500000000000000000");
+
+      tests.asserts.decimalEquals(
+        BigDecimal.fromString("12.5"),
+        decimals.fromWad(wad)
+      );
+    });
+  });
+  describe("fromRay", () => {
+    test("returns BigDecimal from RAY", () => {
+      const ray = BigInt.fromString("12500000000000000000000000000");
+
+      tests.asserts.decimalEquals(
+        BigDecimal.fromString("12.5"),
+        decimals.fromRay(ray)
+      );
+    });
+  });
+  describe("toRad", () => {
+    test("returns RAD from BigDecimal", () => {
+      const value = BigDecimal.fromString("12.5");
+
+      assert.bigIntEquals(
+        BigInt.fromString("12500000000000000000000000000000000000000000000"),
+        decimals.toRad(value)
+      );
+    });
+  });
+  describe("toRay", () => {
+    test("returns RAY from BigDecimal", () => {
+      const value = BigDecimal.fromString("12.5");
+
+      assert.bigIntEquals(
+        BigInt.fromString("12500000000000000000000000000"),
+        decimals.toRay(value)
+      );
+    });
+  });
+  describe("toWad", () => {
+    test("returns WAD from BigDecimal", () => {
+      const value = BigDecimal.fromString("12.5");
+
+      assert.bigIntEquals(
+        BigInt.fromString("12500000000000000000"),
+        decimals.toWad(value)
+      );
+    });
+  });
 });

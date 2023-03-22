@@ -1,5 +1,9 @@
 import { BigDecimal, BigInt } from "@graphprotocol/graph-ts";
+import { RAD, RAY, WAD } from "./constants/units";
 import { TEN } from "./integers";
+
+export const ZERO = BigDecimal.fromString("0");
+export const ONE = BigDecimal.fromString("1");
 
 export function fromBigInt(value: BigInt, decimals: u8): BigDecimal {
   const precision = TEN.pow(decimals);
@@ -27,5 +31,33 @@ export function max(a: BigDecimal, b: BigDecimal): BigDecimal {
   return BigDecimal.compare(a, b) > 1 ? a : b;
 }
 
-export const ZERO = BigDecimal.fromString("0");
-export const ONE = BigDecimal.fromString("1");
+// MakerDAO
+export function fromRad(value: BigInt): BigDecimal {
+  return value.divDecimal(RAD.toBigDecimal());
+}
+
+export function fromRay(value: BigInt): BigDecimal {
+  return value.divDecimal(RAY.toBigDecimal());
+}
+
+export function fromWad(value: BigInt): BigDecimal {
+  return value.divDecimal(WAD.toBigDecimal());
+}
+
+export function toRad(value: BigDecimal): BigInt {
+  const n = value.times(RAD.toBigDecimal());
+
+  return BigInt.fromString(n.toString());
+}
+
+export function toRay(value: BigDecimal): BigInt {
+  const n = value.times(RAY.toBigDecimal());
+
+  return BigInt.fromString(n.toString());
+}
+
+export function toWad(value: BigDecimal): BigInt {
+  const n = value.times(WAD.toBigDecimal());
+
+  return BigInt.fromString(n.toString());
+}
