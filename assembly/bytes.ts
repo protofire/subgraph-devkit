@@ -4,8 +4,10 @@ import { Address, Bytes, BigInt } from "@graphprotocol/graph-ts";
  * Converts Bytes into Address.
  * @example
  * ```
+ * import { bytes } from "@protofire/subgraph-devkit";
+ *
  * const bytesAddress = Bytes.fromHexString("0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984");
- * toAddress(bytesAddress);
+ * bytes.toAddress(bytesAddress);
  * ```
  *
  * @param bytes the Bytes.
@@ -19,8 +21,10 @@ export function toAddress(bytes: Bytes): Address {
  * Converts Bytes into unsigned BigInt.
  * @example
  * ```
+ * import { bytes } from "@protofire/subgraph-devkit";
+ *
  * const bytesData = Bytes.fromHexString("0x28fc");
- * toUnsignedBigInt(bytesData); // => 10492
+ * bytes.toUnsignedBigInt(bytesData); // => 10492
  * ```
  *
  * @param bytes the Bytes.
@@ -36,6 +40,8 @@ export function toUnsignedBigInt(bytes: Bytes, bigEndian: bool = true): BigInt {
  * Converts Bytes into signed BigInt.
  * @example
  * ```
+ * import { bytes } from "@protofire/subgraph-devkit";
+ *
  * const bytesData = Bytes.fromHexString("0xd704");
  * bytes.toSignedBigInt(bytesData); // => -10492
  * ```
