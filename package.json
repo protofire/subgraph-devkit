@@ -1,7 +1,7 @@
 {
   "name": "@protofire/subgraph-devkit",
   "description": "Happiness kit for subgraph developers",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "main": "assembly/index.ts",
   "license": "MIT",
   "author": "Luis Lopez",
@@ -12,6 +12,7 @@
   "devDependencies": {
     "assemblyscript": "^0.25.2",
     "prettier": "^2.8.4",
+    "typedoc": "^0.23.28",
     "typescript": "^4.9.4"
   },
   "type": "module",
@@ -21,7 +22,8 @@
   },
   "scripts": {
     "test": "cd ./tests/dummy && yarn test",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "docs": "typedoc --skipErrorChecking --out docs --readme none assembly/index.ts"
   },
   "engines": {
     "node": ">=16 <20",

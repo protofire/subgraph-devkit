@@ -2,6 +2,13 @@ import { Address, BigInt, ethereum } from "@graphprotocol/graph-ts";
 import { createMockedFunction } from "matchstick-as";
 import { constants } from "..";
 
+/**
+ * Mocks the latestRoundData function of the Chainlink Feed Registry contract.
+ * @param baseAddress the base address.
+ * @param quoteAddress the quote address.
+ * @param value the value.
+ * @param decimals the decimals.
+ */
 export function mockChainLink(
   baseAddress: Address,
   quoteAddress: Address,
@@ -37,6 +44,11 @@ export function mockChainLink(
     .returns([ethereum.Value.fromI32(decimals)]);
 }
 
+/**
+ * Mocks the getPriceUsdcRecommended function of the Yearn Lens Oracle contract.
+ * @param quoteAddress the quote address.
+ * @param value the value.
+ */
 export function mockYearnLens(quoteAddress: Address, value: BigInt): void {
   createMockedFunction(
     constants.addresses.YEARN_LENS_ORACLE,
@@ -47,6 +59,12 @@ export function mockYearnLens(quoteAddress: Address, value: BigInt): void {
     .returns([ethereum.Value.fromUnsignedBigInt(value)]);
 }
 
+/**
+ * Mocks the getAmountsOut function of the Uniswap V2 Router contract.
+ * @param amountIn the amount in.
+ * @param path the path.
+ * @param amountOut the amount out.
+ */
 export function mock_Uniswap_getAmountsOut(
   amountIn: BigInt,
   path: Address[],
@@ -64,6 +82,11 @@ export function mock_Uniswap_getAmountsOut(
     .returns([ethereum.Value.fromUnsignedBigIntArray([amountIn, amountOut])]);
 }
 
+/**
+ * Mocks the decimals function of the ERC20 contract.
+ * @param address the address.
+ * @param decimals the decimals.
+ */
 export function mock_ERC20_decimals(address: Address, decimals: u8): void {
   createMockedFunction(address, "decimals", "decimals():(uint8)").returns([
     ethereum.Value.fromI32(decimals)
