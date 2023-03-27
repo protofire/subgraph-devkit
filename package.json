@@ -1,7 +1,7 @@
 {
   "name": "@protofire/subgraph-devkit",
   "description": "Happiness kit for subgraph developers",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "main": "assembly/index.ts",
   "license": "MIT",
   "author": "Luis Lopez",
