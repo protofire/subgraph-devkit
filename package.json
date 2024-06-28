@@ -1,7 +1,7 @@
 {
   "name": "@protofire/subgraph-devkit",
   "description": "Happiness kit for subgraph developers",
-  "version": "2.4.1",
+  "version": "2.5.1",
   "main": "assembly/index.ts",
   "license": "MIT",
   "author": "Luis Lopez",
@@ -17,8 +17,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@graphprotocol/graph-ts": "^0.29.3",
-    "matchstick-as": "llopez/matchstick-as#dev"
+    "@graphprotocol/graph-cli": "^0.77.0",
+    "@graphprotocol/graph-ts": "^0.35.1"
   },
   "scripts": {
     "test": "cd ./tests/dummy && yarn test",
@@ -26,7 +26,7 @@
     "docs": "typedoc --skipErrorChecking --out docs --readme none assembly/index.ts"
   },
   "engines": {
-    "node": ">=16 <20",
+    "node": ">=18",
     "yarn": "^1.22.19"
   }
 }
