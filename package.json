@@ -17,7 +17,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@graphprotocol/graph-ts": "^0.29.3",
+    "@graphprotocol/graph-cli": "^0.77.0",
+    "@graphprotocol/graph-ts": "^0.35.1",
     "matchstick-as": "llopez/matchstick-as#dev"
   },
   "scripts": {
@@ -26,7 +27,7 @@
     "docs": "typedoc --skipErrorChecking --out docs --readme none assembly/index.ts"
   },
   "engines": {
-    "node": ">=16 <20",
+    "node": ">=16",
     "yarn": "^1.22.19"
   }
 }
