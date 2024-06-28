@@ -27,7 +27,7 @@
     "docs": "typedoc --skipErrorChecking --out docs --readme none assembly/index.ts"
   },
   "engines": {
-    "node": ">=16",
+    "node": ">=18",
     "yarn": "^1.22.19"
   }
 }
